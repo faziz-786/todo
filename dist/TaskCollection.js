@@ -16,7 +16,8 @@ class TaskCollection {
         this.tasks.forEach((item) => item.printTask());
     }
     taskDone(id) {
-        this.tasks.find(item => item.taskId === id).done = true;
+        let item = this.tasks.find(item => item.taskId === id);
+        item.done = true;
     }
 }
 exports.TaskCollection = TaskCollection;

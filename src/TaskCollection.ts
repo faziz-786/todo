@@ -20,6 +20,7 @@ export class TaskCollection{
     }
 
     public taskDone(id:number):void{
-        this.tasks.find(item =>item.taskId===id).done=true;
+        let item = this.tasks.find(item =>item.taskId===id);
+        item.done=true;
     }
 }
