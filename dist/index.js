@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const TaskCollection_1 = require("./TaskCollection");
+console.clear();
+let collection1 = new TaskCollection_1.TaskCollection();
+let collection2 = new TaskCollection_1.TaskCollection();
+collection1.addTodo("col1 task1");
+collection1.addTodo("col1 task2");
+collection2.addTodo("col2 task1");
+collection2.addTodo("col2 task2");
+collection1.taskDone(2);
+collection2.taskDone(1);
+collection1.printAll();
+collection2.printAll();
