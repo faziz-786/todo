@@ -23,4 +23,8 @@ export class TaskCollection{
         let item = this.tasks.find(item =>item.taskId===id);
         item.done=true;
     }
+
+    getTodoById(id: number) : Task {
+        return this.tasks.find(item => item.taskId === id);
+        }
 }

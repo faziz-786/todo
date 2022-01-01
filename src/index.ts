@@ -13,7 +13,10 @@ collection1.addTodo("col1 task2");
 collection2.addTodo("col2 task1");
 collection2.addTodo("col2 task2");
 
+console.log(collection1.getTodoById(2))
+
 collection1.taskDone(2)
 collection2.taskDone(1)
 collection1.printAll()
 collection2.printAll()
+

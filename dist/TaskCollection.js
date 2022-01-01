@@ -19,5 +19,8 @@ class TaskCollection {
         let item = this.tasks.find(item => item.taskId === id);
         item.done = true;
     }
+    getTodoById(id) {
+        return this.tasks.find(item => item.taskId === id);
+    }
 }
 exports.TaskCollection = TaskCollection;
