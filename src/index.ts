@@ -3,6 +3,7 @@ import { TaskCollection } from "./TaskCollection";
 
 console.clear();
 
+// Second update to index 
 let todos = [
     new Task(1, "Buy Flowers"), new Task(2, "Get Shoes"),
     new Task(3, "Collect Tickets"), new Task(4, "Call Joe", true)];
@@ -12,10 +13,13 @@ console.log(todos)
 let collection = new TaskCollection("Adam", todos);
 
 console.log(`${collection.userName}'s Todo List`);
-let newId = collection.addTodo("Go for run");
-let todoItem = collection.getTodoById(newId);
+let newId:number = collection.addTodo("Go for run");
+let todoItem: Task = collection.getTodoById(newId);
 console.log(JSON.stringify(todoItem));
+todoItem.printTask();
+//collection.addTodo(newId);
 
+// first update to index 
 // let collection1:TaskCollection = new TaskCollection();
 // let collection2:TaskCollection = new TaskCollection();
 
