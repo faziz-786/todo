@@ -8,16 +8,23 @@ class TaskCollection {
         this.nextId = 1;
     }
     addTodo(task) {
-        let item = new Task_1.Task(this.nextId, task, false);
-        this.nextId++;
-        this.tasks.push(item);
+        while (this.getTodoById(this.nextId)) {
+            this.nextId++;
+        }
+        this.tasks.push(new Task_1.Task(this.nextId, task));
+        return this.nextId;
     }
     printAll() {
         this.tasks.forEach((item) => item.printTask());
     }
-    taskDone(id) {
-        let item = this.tasks.find(item => item.taskId === id);
-        item.done = true;
+    getTodoById(id) {
+        return this.tasks.find(item => item.taskId === id);
+    }
+    markComplete(id) {
+        let item = this.getTodoById(id);
+        if (item) {
+            item.done = true;
+        }
     }
 }
 exports.TaskCollection = TaskCollection;
